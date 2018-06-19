@@ -32,4 +32,4 @@ void Filter_AV_8_init (struct FIR_AV_8 *Data);
 /** FIR Filter Average over 8 16bit.
  *  param[in] Data Filter Speicher Struktur.
  *  param[in] Sample Neuer Messwert der Verechnet werden muss */
-void Filter_AV_8 (struct FIR_AV_8 *Data, uint_fast16_t Sample);
+void Filter_AV_8 (struct FIR_AV_8 *Data, uint_fast16_t *Sample);

@@ -28,11 +28,11 @@ void Filter_AV_8_init (struct FIR_AV_8 *Data) {
    }
 }
 
-void Filter_AV_8(struct FIR_AV_8 *Data, uint_fast16_t Sample) {
+void Filter_AV_8(struct FIR_AV_8 *Data, uint_fast16_t *Sample) {
 //Lösche Ältesten Eintrag aus der Liste und Positioniere dort den Neuesten 
    Data->total -= Data->Samples[Data->pointer];
-    Data->total += Sample;
-    Data->Samples[Data->pointer] = Sample;
+    Data->total += *Sample;
+    Data->Samples[Data->pointer] = *Sample;
     
 //Signalisiere das Die Ergebnisse Valide sind (Der Speicher einmal komplett volgelaufen ist. 
     if (Data->erg_nvalid) {
