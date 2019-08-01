@@ -16,7 +16,7 @@
 
 // ##### function #####
 
-void Filter_AV_8_init (struct FIR_AV_8 *Data) {
+void Filter_AV_8_init (FIR_AV_8 *Data) {
    uint_fast8_t i;
    
    for (i = 0; i < 8; i++) {
@@ -28,7 +28,7 @@ void Filter_AV_8_init (struct FIR_AV_8 *Data) {
    }
 }
 
-void Filter_AV_8(struct FIR_AV_8 *Data, uint_fast16_t *Sample) {
+void Filter_AV_8(FIR_AV_8 *Data, uint_fast16_t *Sample) {
 //Lösche Ältesten Eintrag aus der Liste und Positioniere dort den Neuesten 
    Data->total -= Data->Samples[Data->pointer];
     Data->total += *Sample;
