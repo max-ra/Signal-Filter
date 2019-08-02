@@ -3,7 +3,7 @@
 
 // ##### Including #####
 //#include <stdint.h>
-#include <xc.h>
+#include "../../../global.h"
 
 /** Inspired by stevenvh (https://electronics.stackexchange.com/users/2064/stevenvh) Post https://electronics.stackexchange.com/questions/42734/fastest-moving-averaging-techniques-with-minimum-footprint */
 
